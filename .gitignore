@@ -1,12 +1,19 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Dependencies
 node_modules/
+
+# Mobile Pre-builds
+android/
+ios/
 
 # Expo
 .expo/
 dist/
 web-build/
+
+# Credentials
+credentials.json
+credentials/
+google-services.json
 
 # Native
 *.orig.*
@@ -19,17 +26,17 @@ web-build/
 # Metro
 .metro-health-check*
 
-# debug
+# Debug
 npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
+# MacOS
 .DS_Store
 *.pem
 
-# local env files
+# Env files
 .env*.local
 
-# typescript
+# Typescript
 *.tsbuildinfo

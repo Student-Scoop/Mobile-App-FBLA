@@ -44,8 +44,8 @@ Our project meets the following requirements from the guidelines stated here: [F
   - All icons have been designed to be consistent with the theme of the app.
 - [x] User input is validated.
   - All user input is validated on the app and on the server before being stored or manipulated.
-- [ ] Integrated with social media
-  - Not yet implemented.
+- [x] Integrated with social media
+  - Our app uses Google and Facebook for single sign on.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,9 +97,9 @@ Coming Soon
 ## 🚧 Future Road Map
 
 - [ ] Add support for social media integration.
-- [ ] Add support for push notifications.
-- [ ] Create a better system for components and screens.
-- [ ] Create a more unified global state management system.
+- [x] Add support for push notifications.
+- [x] Create a better system for components and screens.
+- [x] Create a more unified global state management system.
 
 See the [open issues](https://github.com/Student-Scoop/Mobile-App/issues) for a full list of proposed features as well as known issues.
 

@@ -1,36 +1,59 @@
 {
-	"expo": {
-		"name": "student-scoop",
-		"slug": "student-scoop",
-		"version": "1.0.0",
-		"orientation": "portrait",
-		"icon": "./src/assets/images/icon.png",
-		"userInterfaceStyle": "light",
-		"splash": {
-			"image": "./src/assets/images/splash.png",
-			"resizeMode": "contain",
-			"backgroundColor": "#fff"
-		},
-		"assetBundlePatterns": [
-			"**/*"
-		],
-		"ios": {
-			"supportsTablet": true,
-			"config": {
-				"usesNonExemptEncryption": false
-			}
-		},
-		"android": {
-			"adaptiveIcon": {
-				"foregroundImage": "./src/assets/images/adaptive-icon.png",
-				"backgroundColor": "#ffffff"
-			}
-		},
-		"extra": {
-			"eas": {
-				"projectId": "b6fcf173-7639-4a88-a770-1ebadda976aa"
-			}
-		},
-		"owner": "thelawlessdev"
-	}
+  "expo": {
+    "name": "Student Scoop",
+    "slug": "student-scoop",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.thelawlessdev.studentscoop"
+    },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#000"
+      },
+      "package": "com.thelawlessdev.studentscoop",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b6fcf173-7639-4a88-a770-1ebadda976aa"
+      }
+    },
+    "owner": "thelawlessdev",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin"
+      ],
+      [
+        "./plugins/withAndroidMainActivityAttributes",
+        {
+          "android:windowSoftInputMode": "adjustPan|adjustResize"
+        }
+      ]
+    ]
+  }
 }

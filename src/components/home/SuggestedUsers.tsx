@@ -1,15 +1,17 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 
 const items = [
 	{
 		id: 2,
-		avatar: 'https://pbs.twimg.com/profile_images/1455707950341890051/flRfKMOq_400x400.jpg',
+		avatar:
+			'https://pbs.twimg.com/profile_images/1455707950341890051/flRfKMOq_400x400.jpg',
 		user: 'Nacho'
 	},
 	{
 		id: 3,
-		avatar: 'https://pbs.twimg.com/profile_images/557940120184041473/bFyXy8Pu_400x400.jpeg',
+		avatar:
+			'https://pbs.twimg.com/profile_images/557940120184041473/bFyXy8Pu_400x400.jpeg',
 		user: 'Rich'
 	},
 	{
@@ -19,7 +21,8 @@ const items = [
 	},
 	{
 		id: 5,
-		avatar: 'https://pbs.twimg.com/profile_images/1262107495037796359/N_HoUfGz_400x400.jpg',
+		avatar:
+			'https://pbs.twimg.com/profile_images/1262107495037796359/N_HoUfGz_400x400.jpg',
 		user: 'Galen'
 	},
 	{
@@ -29,12 +32,14 @@ const items = [
 	},
 	{
 		id: 7,
-		avatar: 'https://pbs.twimg.com/profile_images/1266007237874647044/-JqTQ_14_400x400.jpg',
+		avatar:
+			'https://pbs.twimg.com/profile_images/1266007237874647044/-JqTQ_14_400x400.jpg',
 		user: 'Ildiko'
 	},
 	{
 		id: 8,
-		avatar: 'https://pbs.twimg.com/profile_images/1323356199945859072/oJM0cDPb_400x400.png',
+		avatar:
+			'https://pbs.twimg.com/profile_images/1323356199945859072/oJM0cDPb_400x400.png',
 		user: 'Joel'
 	},
 	{
@@ -44,29 +49,26 @@ const items = [
 	},
 	{
 		id: 10,
-		avatar: 'https://pbs.twimg.com/profile_images/958997253892419586/Jb6NPqEa_400x400.jpg',
+		avatar:
+			'https://pbs.twimg.com/profile_images/958997253892419586/Jb6NPqEa_400x400.jpg',
 		user: 'Selman'
 	}
-]
+];
 
 export default function SuggestedUsers() {
 	return (
 		<View style={styles.container}>
 			<View style={styles.suggestedTopContainer}>
 				<Text style={styles.suggestedTitle}>Suggested for you</Text>
-				<Text style={{ color: "#4ade80", fontWeight: 'bold' }}>View All</Text>
+				<Text style={{ color: '#4ade80', fontWeight: 'bold' }}>View All</Text>
 			</View>
 
-			<ScrollView
-				showsHorizontalScrollIndicator={false}
-				horizontal={true}
-			>
+			<ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
 				{items.map((item, key) => (
 					<View key={key} style={styles.story}>
 						<LinearGradient
 							colors={['#f19bff', '#66d3cc', '#6df895']}
-							style={styles.avatarParent}
-						>
+							style={styles.avatarParent}>
 							<Image
 								style={styles.avatar}
 								source={{
@@ -84,19 +86,19 @@ export default function SuggestedUsers() {
 const styles = StyleSheet.create({
 	container: {
 		paddingLeft: 0,
-		paddingRight: 0,
+		paddingRight: 0
 	},
 	suggestedTopContainer: {
-		flexDirection: "row",
-		justifyContent: "space-between",
-		alignItems: "center",
-		marginBottom: 15,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		marginBottom: 15
 	},
 	suggestedTitle: {
 		fontSize: 16,
 		fontWeight: 'bold',
 		fontFamily: 'poppins-bold',
-		textAlign: "center",
+		textAlign: 'center'
 	},
 	story: {
 		width: 68,
@@ -107,7 +109,7 @@ const styles = StyleSheet.create({
 		width: 98,
 		height: 98,
 		borderRadius: 64,
-		padding: 2,
+		padding: 2
 	},
 	avatar: {
 		width: 94,

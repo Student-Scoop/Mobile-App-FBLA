@@ -1,21 +1,32 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { colors } from '../../util/ui/color';
+import { View, Text, StyleSheet } from 'react-native';
+import CircularProgress from 'react-native-circular-progress-indicator';
 
 export default function ChallengeBox() {
 	return (
 		<View>
 			<View style={styles.challengeWrapper}>
-				<Image style={styles.challengeGraphic} source={require('../../assets/images/3d/puzzle.png')} />
-				<View style={styles.challengeTitleProgressWrapper}>
-					<Text style={styles.challengeTitle}>New Challenge!</Text>
-					<Text style={styles.challengeDescription}>Complete your profile and be selected to win!</Text>
+				<View style={styles.challengeInfo}>
+					<Text style={styles.challengeInfoText}>
+						Challenge: Complete your portolfio & profile!
+					</Text>
+					<Text style={styles.challengeInfoTimeText}>3 days left</Text>
 				</View>
-			</View>
-			<View style={styles.challengeDetails}>
-				<View style={styles.challengeDetail}>
-					<Text style={styles.detailText}>Today, 10:20 PM</Text>
-				</View>
-				<View style={styles.challengeDetail}>
-					<Text style={styles.detailText}>500 tokens</Text>
+				<View>
+					<CircularProgress
+						value={75}
+						activeStrokeWidth={15}
+						inActiveStrokeWidth={15}
+						progressValueColor={colors.primaryTextColor}
+						progressValueFontSize={18}
+						activeStrokeColor={'#36d38d'}
+						activeStrokeSecondaryColor={'#4e6dd1'}
+						inActiveStrokeColor={'#0a131a'}
+						valueSuffix="%"
+						progressValueStyle={{
+							fontFamily: 'euclid-semibold'
+						}}
+					/>
 				</View>
 			</View>
 		</View>
@@ -24,65 +35,41 @@ export default function ChallengeBox() {
 
 const styles = StyleSheet.create({
 	challengeWrapper: {
-		width: "100%",
-		backgroundColor: "#4ade80",
-		borderRadius: 14,
-		paddingLeft: 24,
-		paddingRight: 24,
-		shadowColor: "#000",
-		shadowOffset: { width: 0, height: 2 },
-		shadowOpacity: 0.23,
-		shadowRadius: 2.62,
+		width: '100%',
+		backgroundColor: '#fff',
+		borderRadius: 24,
+		//paddingLeft: 24,
+		//paddingRight: 24,
 		elevation: 5,
-		flexDirection: "row",
-		justifyContent: "space-between",
-		alignItems: "center",
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		height: 160
 	},
-	challengeGraphic: {
-		width: 164,
-		height: 164,
-		resizeMode: 'contain',
+	colorWrapper: {
+		backgroundColor: colors.green
 	},
-	challengeTitleProgressWrapper: {
-		flexDirection: "column",
-		justifyContent: "center",
-		alignItems: "center",
-		flexShrink: 1,
+	challengeInfo: {
+		width: '50%',
+		textAlign: 'left',
+		flexDirection: 'column',
+		justifyContent: 'space-evenly',
+		height: '100%'
 	},
-	challengeTitle: {
-		fontSize: 24,
-		fontWeight: 'bold',
-		fontFamily: 'poppins-bold',
-		color: "#fff",
-		textAlign: "center",
+	challengeInfoText: {
+		color: colors.primaryTextColor,
+		fontSize: 17,
+		fontFamily: 'euclid-bold'
+	},
+	challengeInfoTimeText: {
+		color: colors.secondaryTextColor,
+		fontSize: 12,
+		fontFamily: 'euclid-regular'
 	},
 	challengeDescription: {
 		fontSize: 14,
 		fontFamily: 'poppins-regular',
-		color: "#fff",
-		textAlign: "center",
-	},
-	challengeDetails: {
-		flexDirection: "row",
-		justifyContent: "space-between",
-		alignItems: "center",
-		backgroundColor: "#f7f7f7",
-		marginTop: -14,
-		paddingTop: 34,
-		paddingBottom: 20,
-		padding: 18,
-		zIndex: -1,
-		borderBottomRightRadius: 14,
-		borderBottomLeftRadius: 14,
-	},
-	challengeDetail: {
-		flexDirection: "row",
-		justifyContent: "center",
-		alignItems: "center",
-		gap: 6,
-	},
-	detailText: {
-		fontFamily: 'poppins-regular',
-		color: "#a1a1a1",
+		color: '#fff',
+		textAlign: 'center'
 	}
 });

@@ -1,54 +1,42 @@
-import { AnimatedTabBarNavigator } from "react-native-animated-nav-tab-bar";
+import BottomBar from './BottomBar';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from '../screens/Home';
 import SearchScreen from '../screens/Search';
-import GamesScreen from "../screens/Games";
-import MessagingScreen from "../screens/Messaging";
 import ProfileScreen from '../screens/Profile';
+import NotificationScreen from '../screens/Notifications';
 
-import { Home, Search, Gamepad2, UserCircle, MessageSquareMore } from 'lucide-react-native';
+import ViewProfile from '../screens/ViewProfile';
+import EditProfile from '../screens/user/EditProfile';
+import EditPortfolio from '../screens/user/EditPortfolio';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Tabs = AnimatedTabBarNavigator();
+const Stack = createStackNavigator();
+const Tabs = createBottomTabNavigator();
 
-export default function MainNavigator() {
+export function MainNavigator() {
+	return (
+		<Stack.Navigator
+			screenOptions={{ headerShown: false }}
+			initialRouteName="General">
+			<Stack.Screen name="General" component={BottomNavigator} />
+			<Stack.Screen name="ViewProfile" component={ViewProfile} />
+			<Stack.Screen name="EditProfile" component={EditProfile} />
+			<Stack.Screen name="EditPortfolio" component={EditPortfolio} />
+		</Stack.Navigator>
+	);
+}
+
+export function BottomNavigator() {
 	return (
 		<Tabs.Navigator
-			tabBarOptions={{
-				activeTintColor: "#a1a1a1",
-				activeBackgroundColor: "#e3e3e3",
-			}}
-
-			appearance={{
-				floating: false,
-				shadow: true,
-				tabBarBackground: '#f7f7f7',
-			}}
-		>
-			<Tabs.Screen
-				name="Home"
-				component={HomeScreen}
-				options={{ tabBarIcon: () => (<Home color='#a1a1a1' />) }}
-			/>
-			<Tabs.Screen
-				name="Search"
-				component={SearchScreen}
-				options={{ tabBarIcon: () => (<Search color='#a1a1a1' />) }}
-			/>
-			<Tabs.Screen
-				name="Games"
-				component={GamesScreen}
-				options={{ tabBarIcon: () => (<Gamepad2 color='#a1a1a1' />) }}
-			/>
-			<Tabs.Screen
-				name="Messages"
-				component={MessagingScreen}
-				options={{ tabBarIcon: () => (<MessageSquareMore color='#a1a1a1' />) }}
-			/>
-			<Tabs.Screen
-				name="Profile"
-				component={ProfileScreen}
-				options={{ tabBarIcon: () => (<UserCircle color='#a1a1a1' />) }}
-			/>
+			initialRouteName="Home"
+			screenOptions={{ headerShown: false }}
+			tabBar={(props) => <BottomBar {...props} />}>
+			<Tabs.Screen name="Home" component={HomeScreen} />
+			<Tabs.Screen name="Search" component={SearchScreen} />
+			<Tabs.Screen name="Profile" component={ProfileScreen} />
+			<Tabs.Screen name="Feed" component={NotificationScreen} />
 		</Tabs.Navigator>
 	);
 }
