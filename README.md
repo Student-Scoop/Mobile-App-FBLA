@@ -1,5 +1,9 @@
 <a name="readme-top"></a>
 
+| ⚠️ Old Repository                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The contents of this repository have been archived, since a majority of the commits made here were from a previous competition. All new commits and versions can be found here: https://github.com/Student-Scoop/Mobile-App |
+
 <div align="center">
 	<a href="https://github.com/Student-Scoop">
   		<img src="https://raw.githubusercontent.com/Student-Scoop/.github/main/assets/logo.png" alt="Logo" width="95" height="95" />
@@ -14,9 +18,9 @@
 		<br />
     	<a href="https://studentscoop.io/">Our Website</a>
     	·
-    	<a href="https://github.com/Student-Scoop/Mobile-App/issues">Report Bug</a>
+    	<a href="https://github.com/Student-Scoop/Mobile-App-FBLA/issues">Report Bug</a>
     	·
-    	<a href="https://github.com/Student-Scoop/Mobile-App/issues">Request Feature</a>
+    	<a href="https://github.com/Student-Scoop/Mobile-App-FBLA/issues">Request Feature</a>
   	</p>
 </div>
 
@@ -72,7 +76,7 @@ Our project meets the following requirements from the guidelines stated here: [F
 - NodeJS 16+
 - Android Studio (Recommended)
 
-1. Clone the repo `git clone https://github.com/Student-Scoop/Mobile-App.git`
+1. Clone the repo `git clone https://github.com/Student-Scoop-FBLA/Mobile-App.git`
 2. Open a terminal in the cloned folder.
 3. Run `npm install` in the `./Mobile-App` folder.
 4. Open the file `./constants/config.ts` and change the `BACKEND_API_URL` value to the URL of the backend server.
@@ -101,7 +105,7 @@ Coming Soon
 - [x] Create a better system for components and screens.
 - [x] Create a more unified global state management system.
 
-See the [open issues](https://github.com/Student-Scoop/Mobile-App/issues) for a full list of proposed features as well as known issues.
+See the [open issues](https://github.com/Student-Scoop/Mobile-App-FBLA/issues) for a full list of proposed features as well as known issues.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
